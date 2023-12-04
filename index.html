@@ -51,6 +51,23 @@
              tr:nth-child(even) {
                 background-color: #dddddd;
              }
+      #slide-container {
+        text-align: center;
+      }
+
+      #slideshow {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .button-container,
+      .slide-number-container {
+        margin-top: 10px;
+      }
+
+      .button {
+        padding: 10px;
+        margin: 0 5px;
 
 
     </style>
@@ -225,14 +242,81 @@
          <br>
          <br>
 
-         
+
+         <h3>Conference presentation: Journey to the Challenger Deep</h3>
+         <script>
+           var slideimages = ["slide1.png", "slide2.png", "slide3.png", "slide4.png"];
+           var currentSlide = 0;
+
+           function showslide() {
+             document.getElementById("slideshow").src = slideimages[currentSlide];
+           }
+
+           function nextSlide() {
+             currentSlide = (currentSlide + 1) % slideimages.length;
+             showslide();
+           }
+
+           function prevSlide() {
+             currentSlide = (currentSlide - 1 + slideimages.length) % slideimages.length;
+             showslide();
+           }
+
+           function showSlideNumber(slideNumber) {
+             currentSlide = slideNumber - 1;
+             showslide();
+           }
+
+           showslide();
+         </script>
 
 
-         
-       
+           <script>
+             var slideimages = ["slide1.png", "slide2.png", "slide3.png", "slide4.png"];
+             var currentSlide = 0;
+
+             function showslide() {
+               document.getElementById("slideshow").src = slideimages[currentSlide];
+             }
+
+             function nextSlide() {
+               currentSlide = (currentSlide + 1) % slideimages.length;
+               showslide();
+             }
+
+             function prevSlide() {
+               currentSlide = (currentSlide - 1 + slideimages.length) % slideimages.length;
+               showslide();
+             }
+
+             function showSlideNumber(slideNumber) {
+               currentSlide = slideNumber - 1;
+               showslide();
+             }
+
+             showslide();
+           </script>
+
+           <div id="slide-container">
+             <img id="slideshow" src="slide1.png" alt="Slide 1" style="width:100%; max-width:800px;">
+
+             <div class="button-container">
+               <button class="button" onclick="prevSlide()">Previous</button>
+               <button class="button" onclick="nextSlide()">Next</button>
+             </div>
+
+             <div class="slide-number-container">
+               <button class="button" onclick="showSlideNumber(1)">1</button>
+               <button class="button" onclick="showSlideNumber(2)">2</button>
+               <button class="button" onclick="showSlideNumber(3)">3</button>
+               <button class="button" onclick="showSlideNumber(4)">4</button>
+             </div>
+           </div>
+
+
+
 	 </html>
         
-
 
 
 
