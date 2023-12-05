@@ -253,26 +253,26 @@
              var slideimages = ["Slide 1 .png", "slide 2 .png", "slide 3 .png", "slide 4 .png"];
              var currentSlide = 0;
 
-             function showslide() {
-               document.getElementById("slideshow").src = slideimages[currentSlide];
-             }
+             function showSlide() {
+            document.getElementById('slideshow').src = slideimages[currentSlide];
+          }
 
-             function nextSlide() {
-               currentSlide = (currentSlide + 1) % slideimages.length;
-               showslide();
-             }
+          function nextSlide() {
+            currentSlide = (currentSlide + 1) % slideimages.length;
+            showslide();
+          }
 
-             function prevSlide() {
-               currentSlide = (currentSlide - 1 + slideimages.length) % slideimages.length;
-               showslide();
-             }
+          function prevSlide() {
+            currentSlide = (currentSlide - 1 + slideimages.length) % slideimages.length;
+            showslide();
+          }
 
-             function showSlideNumber(slideNumber) {
-               currentSlide = slideNumber - 1;
-               showslide();
-             }
+          function showSlideNumber(slideNumber) {
+            currentSlide = slideNumber - 1;
+            showslide();
+          }
 
-             showslide();
+          showSlide();
            </script>
 
            <div id="slide-container">
