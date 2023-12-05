@@ -249,33 +249,6 @@
 
 
          <h3>Conference presentation: Journey to the Challenger Deep</h3>
-         <script>
-           var slideimages = ["slide1.png", "slide2.png", "slide3.png", "slide4.png"];
-           var currentSlide = 0;
-
-           function showslide() {
-             document.getElementById("slideshow").src = slideimages[currentSlide];
-           }
-
-           function nextSlide() {
-             currentSlide = (currentSlide + 1) % slideimages.length;
-             showslide();
-           }
-
-           function prevSlide() {
-             currentSlide = (currentSlide - 1 + slideimages.length) % slideimages.length;
-             showslide();
-           }
-
-           function showSlideNumber(slideNumber) {
-             currentSlide = slideNumber - 1;
-             showslide();
-           }
-
-           showslide();
-         </script>
-
-
            <script>
              var slideimages = ["slide1.png", "slide2.png", "slide3.png", "slide4.png"];
              var currentSlide = 0;
