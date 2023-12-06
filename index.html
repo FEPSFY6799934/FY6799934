@@ -259,17 +259,17 @@
 
           function nextSlide() {
             currentSlide = (currentSlide + 1) % slideimages.length;
-            showslide();
+            showSlide();
           }
 
           function prevSlide() {
             currentSlide = (currentSlide - 1 + slideimages.length) % slideimages.length;
-            showslide();
+            showSlide();
           }
 
           function showSlideNumber(slideNumber) {
             currentSlide = slideNumber - 1;
-            showslide();
+            showSlide();
           }
 
           showSlide();
